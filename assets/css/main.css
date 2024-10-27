@@ -1,0 +1,1235 @@
+.main {
+    background-color: #d7dfd6;
+}
+
+/* Dang ky - Dang nhap */
+.in-sign-up {
+    top: 24.15%;
+}
+
+.in-sign-in {
+    top: 26.4%;
+}
+
+.in-sign-up__header, .in-sign-in__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.in-sign-up__heading, .in-sign-in__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.in-sign-up__switch, .in-sign-in__switch {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.in-sign-up__form, .in-sign-in__form {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(232, 82, 17, 1);
+}
+
+.auth__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    cursor: pointer;
+}
+
+.auth__input:focus {
+    border-color: rgba(0, 0, 0, 0.9);
+    cursor: text;
+}
+
+.in-sign-up__group, .in-sign-in__group {
+    display: flex;
+}
+
+.eye, .eye1, .eye2 {
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 1px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.eye.eye1.eye2:hover {
+    border-color: rgba(0, 0, 0, 0.9);
+}
+
+.eye.eye1.eye2:active {
+    transform: scale(0.85);
+}
+
+.in-sign-in__forget {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.forget-pwd {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: rgb(232, 82, 17, 1);
+}
+
+.forget-pwd:hover {
+    color: rgb(232, 82, 17, 0.5);
+}
+
+.in-sign-up__btn, .in-sign-in__btn {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.btn.btn--primary:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*GIAO DIỆN*/
+/*menu*/
+.web-app__header {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.web-app__left, .web-app__between, .web-app__right {
+    align-content: center;
+}
+
+.web-app__left {
+    padding-left: 50px;
+}
+
+.web-app__between {
+    color: skyblue;
+    font-size: 46px;
+}
+
+.icon-left-header {
+    padding-left: 30px;
+}
+
+.icon-right-header {
+    padding-right: 30px;
+}
+
+.menu-chat, .menu-add, .menu-info, .menu-list {
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 25px;
+    color: #333333;
+    border: 1px solid transparent;
+}
+
+.menu-chat:hover, .menu-add:hover, .menu-info:hover, .menu-list:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Chat list*/
+.chat-list__header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 19.58%;
+    display: grid;
+    grid-template-rows: 45% 55%;
+    justify-items: center;
+    align-items: center;
+}
+
+.chat-list__heading {
+    position: relative;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.chat-list__search {
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-search {
+    width: 93%;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.input-search:focus {
+    background-color: rgba(0,0,0,0.065);
+}
+
+.input-search:focus::placeholder {
+    opacity: 0.4;
+}
+
+.chat-list__body, .search-chat-list {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80.42%;
+    overflow: auto;
+    padding: 8px 12px 0 12px;
+}
+
+.chat-list__user, .search-chat-list__user {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.chat-list__user:hover {
+    background-color: rgba(0,0,0,0.03);
+    cursor: pointer;
+}
+
+.chat-list__avatar, .search-chat-list__avatar {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.CLU {
+    display: grid;
+    grid-template-columns: calc(100% - 30px) 30px;
+    justify-items: stretch;
+    align-items: center;
+}
+
+.CLU__info {
+    width: 216px;
+}
+
+.CLU__name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.CLU__messenger {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.CLU__setting {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    align-content: center;
+    background-color: white;
+    z-index: 1;
+}
+
+.CLU__setting:hover {
+    background-color: rgba(0,0,0,0.055);
+    cursor: pointer;
+}
+
+.search-chat-list__user:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.search-chat-list__name {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 16px;
+}
+
+/*Chat-chat*/
+.chat-chat__header {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 8px;
+    border-bottom: 1px solid transparent;
+}
+
+.chat-chat__header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.6px;
+    background-color: #c3c3c3;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
+    border-radius: 2px;
+}
+
+.chat-chat__heading {
+    display: flex;
+    align-items: center;
+}
+
+.chat-chat__name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.chat-chat__avatar {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.chat-chat__icon-heading {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 10px;
+    color: brown;
+}
+
+.chat-chat__icon-heading:hover {
+    background-color: rgba(0,0,0,0.04);
+}
+
+.chat-chat__body {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: calc(100% - 56px - 72px);
+    background-color: antiquewhite;
+}
+
+.chat-chat__footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 56px;
+    display: grid;
+    grid-template-columns: 102px calc(100% - 34*4px) 34px;
+    align-content: center;
+    padding: 0 10px;
+}
+
+.chat-chat__icon-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other, .insert-img, .gif, .like {
+    font-size: 20px;
+    background-color: white;
+    width: 34px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.other:hover, .like:hover, .insert-img:hover, .gif:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.box-chat {
+    height: 36px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.06);
+    outline: none;
+}
+
+.box-chat:focus {
+    cursor: text;
+}
+
+/*Chat-tool*/
+.chat-tool__header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24.6%;   /*138px*/
+    display: grid;
+    grid-template-rows: 69.56% 30.44%;  /*96px 42px*/
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-tool__avatar {
+    width: 80px;
+    height: 80px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.chat-tool__name {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.chat-tool__body {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75.4%;  /*423px*/
+}
+
+.chat-tool__menu {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.chat-tool__notification, .chat-tool__search {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.03);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-tool__notification:hover, .chat-tool__search:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.chat-tool__img {
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: calc(100% - 20px);
+    height: 40px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.chat-tool__img:hover {
+    background-color: rgba(0,0,0,0.08);
+}
+
+/*File-image*/
+.file-image__header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.file-image__icon-heading {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.file-image__icon-heading:hover {
+    background-color: rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.file-image__heading {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.file-image__body {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 87%;
+}
+
+.file-image__menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    grad: 0;
+    padding: 0 10px;
+}
+
+.file-image__image, .file-image__file {
+    width: 116px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+}
+
+.file-image__image:hover, .file-image__file:hover {
+    background-color: rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.file-image__image-content, .file-image__file-content {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: #949494;
+}
+
+/*Add friend*/
+.add-in__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.add-in__heading {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: text;
+    color: skyblue;
+}
+
+.add-in__icon-heading {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(0,0,0,0.01);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 400;
+    color: skyblue;
+}
+
+.add-in__icon-heading:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.add-in__body {
+    position: relative;
+    left: 0;
+    top: 6px;
+    width: 100%;
+    height: calc(90% - 6px);
+}
+
+.add-in__input {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8.4%;
+    font-size: 16px;
+    font-weight: 300;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+    padding-left: 6px;
+}
+
+.add-in__input:focus {
+    border-color: rgba(0,0,0,0.06);
+    cursor: text;
+    outline: 1px solid deepskyblue;
+}
+
+.add-in__list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 91.6%;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+.add-in__user {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    display: flex;
+    align-items: center;
+}
+
+.add-in__img {
+    width: 46px;
+    height: 46px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.add-in__name {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+.add-in__addfr {
+    width: 70px;
+    height: 34px;
+    border: 1px solid deepskyblue;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.01);
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 110px;
+    color: dodgerblue;
+}
+
+.add-in__addfr:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/*WEB-APP__LIST*/
+.list-menu__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.list-menu__body {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    margin: 10px 10px 0 10px;
+}
+
+.list-menu__friend, .list-menu__group, .list-menu__addfr, .list-menu__addgr {
+    position: relative;
+    left: 0;
+    width: 94.5%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.list-menu__friend {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.list-menu__friend:hover, .list-menu__group:hover, .list-menu__addfr:hover, .list-menu__addgr:hover {
+    transform: scale(1.04);
+}
+
+.list-menu__title, .list-menu__icon {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*List-friend List-group*/
+.list-friend__header, .list-group__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.list-friend__body, .list-group__body {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 92%;
+}
+
+.list-friend__search, .list-group__search {
+    position: relative;
+    left: 0;
+    width: 50%;
+    height: 9%;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding-left: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.list-friend__search:focus, .list-group__search:focus {
+    cursor: text;
+}
+
+.list-friend__result, .list-group__result {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    overflow-y: auto;
+}
+
+.result-user, .result-group {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.result-user__avatar, .result-group__avatar {
+    width: 60px;
+    height: 60px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.result-user__name, .result-group__name {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 50%;
+}
+
+.result-user__cancel, .result-group__cancel {
+    width: 100px;
+    height: 35px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    background-color: transparent;
+}
+
+.result-user__prevent, .result-group__prevent {
+    width: 50px;
+    height: 35px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    background-color: transparent;
+    margin: auto;
+}
+
+.result-user__cancel:hover, .result-user__prevent:hover, .result-user:hover, .result-group__cancel:hover, .result-group__prevent:hover, .result-group:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/*List-addfr*/
+.list-addfr__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.list-addfr__body {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 92%;
+}
+
+.list-addfr__sent {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 60%;
+}
+
+.list-addfr__gave {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 38%;
+}
+
+.sent-heading, .gave-heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgb(231, 143, 129);
+}
+
+.sent-list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.gave-list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: rgb(193, 226, 164);
+    padding: 10px;
+    align-items: center;
+}
+
+.sent-user, .gave-user {
+    flex: 0 0 auto;
+    width: 32%;
+    height: 45%;
+    background-color: rgb(253, 250, 217);
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-template-columns: 100%;
+    margin: 0 10px 10px 0;
+}
+
+.gave-user {
+    width: 30%;
+    height: 80%;
+}
+
+.sent-user__info, .gave-user__info {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.sent-user__avatar, .gave-user__avatar {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.sent-user__name, .gave-user__name {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.sent-user__button, .gave-user__button {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.sent-user__accept {
+    width: 90px;
+    height: 33px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.sent-user__refuse {
+    width: 70px;
+    height: 33px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    background-color: rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gave-user__recall {
+    width: 80%;
+    height: 33px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.sent-user__accept:hover, .sent-user__refuse:hover, .gave-user__recall:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/*LIST-ADDGR*/
+.list-addgr__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: rgb(8, 194, 255);
+}
+
+.list-addgr__body {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 92%;
+}
+
+.list-addgr__list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.list-addgr__user {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+}
+
+.list-addgr__user:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+  .list-addgr__avatar {
+    width: 60px;
+    height: 60px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.list-addgr__name {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.list-addgr__accept, .list-addgr__close {
+    width: 100px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    background-color: rgba(0,0,0,0.05);
+    margin-left: auto;
+}
+
+.list-addgr__close {
+    margin-left: 20px;
+}
+
+.list-addgr__accept:hover, .list-addgr__close:hover {
+    background-color: white;
+}
+
+/*WEB-APP__INFO*/
+.in-info__header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.in-info__heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.in-info__body {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+.in-info__info1 {
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.in-info__img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.in-info__username {
+    padding-left: 14px;
+    font-size: 18px;
+    font-weight: 400;
+    color: cadetblue;
+}
+
+.in-info__gmail, .in-info__password {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.gmail__title, .password__title {
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.gmail__info, .password__info {
+    font-size: 14px;
+    color: cadetblue;
+}
+
+.gmail__see, .password__see {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    margin-left: auto;
+}
+
+.gmail__edit, .password__edit, .info1__edit {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 200;
+    cursor: pointer;
+    outline: none;
+    margin-left: 6px;
+}
+
+.gmail__see:hover, .gmail__edit:hover, .password__edit:hover, .password__see:hover, .info1__edit:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.in-info__new-gmail, .in-info__new-name {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    margin-top: 30px;
+}
+
+.new-gmail__input, .new-password__input, .new-name__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.new-gmail__input:focus, .new-password__input:focus, .new-name__input:focus {
+    border-color: rgba(0,0,0,0.1);
+    cursor: text;
+}
+
+.new__note-name, .new__note-gmail, .new__note-password {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(53, 114, 239);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    padding: 0 4px;
+}
+
+.new__close-name, .new__close-gmail, .new__close-password {
+    width: 40px;
+    height: 30px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+}
+
+.in-info__new-password {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 42%;
+    margin-top: 10px;
+}
+
+.new-password__input {
+    margin-top: 10px;
+}
+
+.in-info__footer {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.in-info__back, .in-info__log-out {
+    width: 200px;
+    height: 30px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+}
+
+.in-info__back:hover, .in-info__log-out:hover, .new__close-name:hover, .new__close-gmail:hover, .new__close-password:hover {
+    background-color: rgba(0,0,0,0.1);
+}

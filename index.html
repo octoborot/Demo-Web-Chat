@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB CHAT</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="ahri.js" defer></script>
+</head>
+
+<body>
+    <!-- ĐĂNG KÝ -->
+    <div class="sign-up" style="display: none">
+        <div class="out-sign-up"></div>
+
+        <div class="in-sign-up">
+            <div class="in-sign-up__header">
+                <h2 class="in-sign-up__heading">Đăng ký</h2>
+                <button class="in-sign-up__switch">
+                    Đăng nhập
+                </button>
+            </div>
+
+            <div class="in-sign-up__form">
+                <div class="in-sign-up__group">
+                    <input type="text" class="auth__input" placeholder="Email">
+                </div>
+
+                <div class="in-sign-up__group">
+                    <input type="password" class="auth__input pass-up" placeholder="Mật khẩu">
+                    <button class="eye">
+                        <i class="fa fa-eye eye-noslash"></i>
+                        <i class="fa fa-eye-slash eye-slash" style="display: none"></i>
+                    </button>
+                </div>
+
+                <div class="in-sign-up__group">
+                    <input type="password" class="auth__input pass-up1" placeholder="Nhập lại mật khẩu">
+                    <button class="eye1">
+                        <i class="fa fa-eye eye-noslash1"></i>
+                        <i class="fa fa-eye-slash eye-slash1" style="display: none"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="in-sign-up__btn">
+                <button class="btn btn--primary">ĐĂNG KÝ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ĐĂNG NHẬP -->
+    <div class="sign-in" style="display: none">
+        <div class="out-sign-in"></div>
+
+        <div class="in-sign-in">
+            <div class="in-sign-in__header">
+                <h2 class="in-sign-in__heading">Đăng nhập</h2>
+                <button class="in-sign-in__switch">
+                    Đăng kí
+                </button>
+            </div>
+
+            <div class="in-sign-in__form">
+                <div class="in-sign-in__group">
+                    <input type="text" class="auth__input" placeholder="Email">
+                </div>
+
+                <div class="in-sign-in__group">
+                    <input type="password" class="auth__input pass-up2" placeholder="Mật khẩu">
+                    <button class="eye2">
+                        <i class="fa fa-eye eye-noslash2"></i>
+                        <i class="fa fa-eye-slash eye-slash2" style="display: none"></i>
+                    </button>
+                </div>
+
+                <div class="in-sign-in__forget">
+                    <a href="" class="forget-pwd">Quên mật khẩu</a>
+                </div>
+            </div>
+
+            <div class="in-sign-in__btn">
+                <button class="btn btn--primary">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Giao diện web-->
+    <div class="web-app">
+        <div class="web-app__header">
+            <div class="web-app__left">
+                <i class="fa fa-hippo icon-left-header"></i>
+                <i class="fa fa-ghost icon-left-header"></i>
+                <i class="fa fa-gift icon-left-header"></i>
+                <i class="fa fa-umbrella icon-left-header"></i>
+            </div>
+
+            <div class="web-app__between">WEB CHAT</div>
+
+            <div class="web-app__right">
+                <i class="fa fa-fire icon-right-header"></i>
+                <i class="fa fa-plane icon-right-header"></i>
+                <i class="fa fa-city icon-right-header"></i>
+                <i class="fa fa-snowflake icon-right-header"></i>
+            </div>
+        </div>
+
+        <div class="web-app__body">
+            <div class="web-app__menu">
+                <button class="menu-chat" title="Đoạn chat">
+                    <i class="fa fa-comment"></i> <!--Chat-->
+                </button>
+
+                <button class="menu-add">
+                    <i class="fa fa-user-plus" title="Kết bạn"></i> <!--Add friend-->
+                </button>
+
+                <button class="menu-list">
+                    <i class="fa fa-address-book" title="Danh sách bạn bè"></i> <!--List friend-->
+                </button>
+
+                <button class="menu-info">
+                    <i class="fa fa-address-card" title="Thông tin tài khoản"></i> <!--Information-->
+                </button>
+            </div>
+
+            <div class="web-app__chat" >
+                <div class="chat-list">
+                    <div class="chat-list__header">
+                        <div class="chat-list__heading">Đoạn chat</div>
+                        <div class="chat-list__search">
+                            <input type="text" class="input-search" placeholder="Tìm kiếm trên WEB CHAT">
+                        </div>
+                    </div>
+
+                    <div class="search-chat-list" style="display: none">
+                        <div class="search-chat-list__user">
+                            <img src="assets\anh5.jpg" class="search-chat-list__avatar" alt="">
+                            <div class="search-chat-list__name">Nguyễn Đức Chính</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-list__body">
+                        <div class="chat-list__user">
+                            <img src="assets\anh5.jpg" class="chat-list__avatar" alt="">
+                            <div class="CLU">
+                                <div class="CLU__info">
+                                    <div class="CLU__name">Nguyễn Đức Chính</div>
+                                    <div class="CLU__messenger">Chúc bạn may mắn lần sau</div>
+                                </div>
+                                <button class="CLU__setting" style="display: none">
+                                    <i class="fa fa-wrench"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chat-list__user">
+
+                        </div>
+                        <div class="chat-list__user">
+
+                        </div>
+                        <div class="chat-list__user">
+
+                        </div>
+                    </div>
+
+                    <div class="chat-list__footer">
+
+                    </div>
+                </div>
+
+                <div class="chat-chat">
+                    <div class="chat-chat__header">
+                        <div class="chat-chat__heading">
+                            <img src="assets/anh5.jpg" class="chat-chat__avatar" alt="">
+                            <div class="chat-chat__name">Nguyễn Đức Chính</div>
+                        </div>
+                        <button class="chat-chat__icon-heading" title="Thông tin đoạn chat">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <div class="chat-chat__body">
+                        <div class="me">
+
+                        </div>
+                        <div class="you">
+
+                        </div>
+                    </div>
+
+                    <div class="chat-chat__footer">
+                        <div class="chat-chat__icon-left">
+                            <button class="other">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <button class="insert-img">
+                                <i class="fa fa-image"></i>
+                            </button>
+                            <button class="gif">
+                                <i class="fa fa-gift"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="box-chat" placeholder="Nhập tin nhắn">
+                        <button class="like">
+                            <i class="fa fa-thumbs-up"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-tool">
+                    <div class="chat-tool__header">
+                        <img src="assets/anh5.jpg" alt="" class="chat-tool__avatar">
+                        <div class="chat-tool__name">Nguyễn Đức Chính</div>
+                    </div>
+
+                    <div class="chat-tool__body">
+                        <div class="chat-tool__menu">
+                            <button class="chat-tool__notification" title="Tắt thông báo">
+                                <i class="fa fa-bell"></i>
+                            </button>
+                            <button class="chat-tool__search" title="Tìm kiếm tin nhắn trong đoạn chat">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <div class="chat-tool__img">
+                            <div>Ảnh và file</div>
+                            <div>
+                                <i class="fa-solid fa-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-tool__footer">
+
+                    </div>
+                </div>
+
+                <div class="file-image" style="display: none">
+                    <div class="file-image__header">
+                        <button class="file-image__icon-heading">
+                            <i class="fa fa-left-long"></i>
+                        </button>
+                        <div class="file-image__heading">File và ảnh</div>
+                    </div>
+                    <div class="file-image__body">
+                        <div class="file-image__menu">
+                            <button class="file-image__image">Ảnh</button>
+                            <button class="file-image__file">File</button>
+                        </div>
+                        <div class="file-image__image-content" style="display: none">
+
+                        </div>
+                        <div class="file-image__file-content" style="display: none">
+
+                        </div>
+                    </div>
+                    <div class="file-image__footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="web-app__add" style="display: none">
+                <div class="add-out">
+
+                </div>
+                <div class="add-in">
+                    <div class="add-in__header">
+                        <div class="add-in__heading">Thêm bạn</div>
+                        <button class="add-in__icon-heading">
+                            <i class="fa-sharp fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="add-in__body">
+                        <input type="text" class="add-in__input" placeholder="Nhập tên">
+                        <div class="add-in__list">
+                            <div class="add-in__user">
+                                <img src="assets/anh5.jpg" class="add-in__img" alt="">
+                                <div class="add-in__name">Nguyễn Đức Chính</div>
+                                <button class="add-in__addfr">Kết bạn</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-in__footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="web-app__list" style="display: none">
+                <div class="list-menu">
+                    <div class="list-menu__header">
+                        <div class="list-menu__heading">Menu List</div>
+                    </div>
+
+                    <div class="list-menu__body">
+                        <div class="list-menu__friend">
+                            <div class="list-menu__title">Danh sách bạn bè</div>
+                            <i class="fa fa-angles-right list-menu__icon"></i>
+                        </div>
+                        <div class="list-menu__group">
+                            <div class="list-menu__title">Danh sách nhóm</div>
+                            <i class="fa fa-angles-right list-menu__icon"></i>
+                        </div>
+                        <div class="list-menu__addfr">
+                            <div class="list-menu__title">Lời mời kết bạn</div>
+                            <i class="fa fa-angles-right list-menu__icon"></i>
+                        </div>
+                        <div class="list-menu__addgr">
+                            <div class="list-menu__title">Lời mời vào nhóm</div>
+                            <i class="fa fa-angles-right list-menu__icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="list-menu__footer">
+
+                    </div>
+                </div>
+                <div class="list-friend">
+                    <div class="list-friend__header">
+                        Danh sách bạn bè
+                    </div>
+
+                    <div class="list-friend__body">
+                        <input type="text" class="list-friend__search" placeholder="Nhập tên cần tìm">
+                        <div class="list-friend__result">
+                            <div class="result-user">
+                                <img src="assets/anh5.jpg" alt="" class="result-user__avatar">
+                                <div class="result-user__name">Nguyễn Đức Chính</div>
+                                <button class="result-user__cancel">Hủy kết bạn</button>
+                                <button class="result-user__prevent">Chặn</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-friend__footer">
+
+                    </div>
+                </div>
+                <div class="list-group" style="display: none">
+                    <div class="list-group__header">
+                        Danh sách nhóm
+                    </div>
+
+                    <div class="list-group__body">
+                        <input type="text" class="list-group__search" placeholder="Nhập tên nhóm cần tìm">
+                        <div class="list-group__result">
+                            <div class="result-group">
+                                <img src="assets/anh5.jpg" alt="" class="result-group__avatar">
+                                <div class="result-group__name">Nhóm hacker lỏ</div>
+                                <button class="result-group__cancel">Rời nhóm</button>
+                                <button class="result-group__prevent">Chặn</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group__footer">
+
+                    </div>
+                </div>
+                <div class="list-addfr" style="display: none">
+                    <div class="list-addfr__header">
+                        Lời mời kết bạn
+                    </div>
+
+                    <div class="list-addfr__body">
+                        <div class="list-addfr__sent">
+                            <div class="sent-heading">Lời mời đã nhận</div>
+                            <div class="sent-list">
+                                <div class="sent-user">
+                                    <div class="sent-user__info">
+                                        <img src="assets/anh5.jpg" alt="" class="sent-user__avatar">
+                                        <div class="sent-user__name">Nguyễn Đức Chính</div>
+                                    </div>
+                                    <div class="sent-user__button">
+                                        <button class="sent-user__accept">Chấp nhận</button>
+                                        <buttom class="sent-user__refuse">Từ chối</buttom>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-addfr__gave">
+                            <div class="gave-heading">Lời mời đã gửi</div>
+                            <div class="gave-list">
+                                <div class="gave-user">
+                                    <div class="gave-user__info">
+                                        <img src="assets/anh5.jpg" alt="" class="gave-user__avatar">
+                                        <div class="gave-user__name">Nguyễn Đức Chính</div>
+                                    </div>
+                                    <div class="gave-user__button">
+                                        <button class="gave-user__recall">Thu hồi lời mời</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-addfr__footer">
+
+                    </div>
+                </div>
+                <div class="list-addgr" style="display: none">
+                    <div class="list-addgr__header">Lời mời vào nhóm</div>
+
+                    <div class="list-addgr__body">
+                        <div class="list-addgr__list">
+                            <div class="list-addgr__user">
+                                <img src="assets/anh5.jpg" alt="" class="list-addgr__avatar">
+                                <div class="list-addgr__name">Nhóm thi đấu TFT thế giới</div>
+                                <button class="list-addgr__accept">Chấp nhận</button>
+                                <button class="list-addgr__close">Từ chối</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-addgr__footer"></div>
+                </div>
+            </div>
+
+            <div class="web-app__info" style="display: none">
+                <div class="out-info">
+
+                </div>
+                <div class="in-info">
+                    <div class="in-info__header">
+                        <div class="in-info__heading">THÔNG TIN TÀI KHOẢN</div>
+                    </div>
+                    <div class="in-info__body">
+                        <div class="in-info__info1">
+                            <img src="assets/anh5.jpg" class="in-info__img" alt="">
+                            <div class="in-info__username">Nguyễn Đức Chính</div>
+                            <button class="info1__edit" title="Chỉnh sửa">
+                                <i class="fa fa-pen-to-square"></i>
+                            </button>
+                        </div>
+                        <div class="in-info__gmail">
+                            <div class="gmail__title">Gmail:</div>
+                            <div class="gmail__info">n22dccn110@student.ptithcm.edu.vn</div>
+                            <button class="gmail__see">
+                                <i class="fa fa-eye gmail__icon-see"></i>
+                                <i class="fa fa-eye-slash gmail__icon-nosee" style="display: none"></i>
+                            </button>
+                            <button class="gmail__edit" title="Chỉnh sửa">
+                                <i class="fa fa-pen-to-square"></i>
+                            </button>
+                        </div>
+                        <div class="in-info__password">
+                            <div class="password__title">Mật khẩu:</div>
+                            <div class="password__info">chinhpro123@</div>
+                            <button class="password__see">
+                                <i class="fa fa-eye password__icon-see"></i>
+                                <i class="fa fa-eye-slash password__icon-nosee" style="display: none"></i>
+                            </button>
+                            <button class="password__edit" title="Chỉnh sửa">
+                                <i class="fa fa-pen-to-square"></i>
+                            </button>
+                        </div>
+                        <div class="in-info__new-name" style="display: none">
+                            <input type="text" class="new-name__input" placeholder="Nhập tên mới">
+                            <div class="new__note-name">
+                                <div class="new__save-name">Nhấn Enter để lưu</div>
+                                <button class="new__close-name">Hủy</button>
+                            </div>
+                        </div>
+                        <div class="in-info__new-gmail" style="display: none">
+                            <input type="text" class="new-gmail__input" placeholder="Nhập gmail mới">
+                            <div class="new__note-gmail">
+                                <div class="new__save-gmail">Nhấn Enter để lưu</div>
+                                <button class="new__close-gmail">Hủy</button>
+                            </div>
+                        </div>
+                        <div class="in-info__new-password" style="display: none">
+                            <input type="text" class="new-password__input" placeholder="Nhập mật khẩu mới">
+                            <input type="text" class="new-password__input" placeholder="Nhập lại mật khẩu mới">
+                            <div class="new__note-password">
+                                <div class="new__save-password">Nhấn Enter để lưu</div>
+                                <button class="new__close-password">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-info__footer">
+                        <button class="in-info__back">Quay lại</button>
+                        <button class="in-info__log-out">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="web-app__footer">
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+

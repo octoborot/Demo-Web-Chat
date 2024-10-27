@@ -1,0 +1,217 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Dang ky - Dang nhap */
+.sign-up, .sign-in{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(200, 210, 209);
+}
+
+.out-sign-up, .out-sign-in {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.in-sign-up, .in-sign-in {
+    position: relative;
+    left: 32.2%;
+    width: 500px;
+    max-height: 400px;
+    background-color: antiquewhite;
+    padding: 0 32px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: orangered;
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+/*GIAO DIỆN*/
+/*Menu*/
+.web-app {
+
+}
+
+.web-app__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #fff5f4, #edeafd);
+    width: 100%;
+    height: 40px;
+}
+
+.web-app__body {
+
+}
+
+.web-app__menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 50px;
+    height: 93.56%;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #fff5f4, skyblue);
+    flex-wrap: wrap;
+}
+
+/*Chat*/
+.web-app__chat, .web-app__list {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    padding: 10px;
+    width: 96.42%;
+    height: 93.56%;
+    background-color: lightsteelblue;
+    display: flex;
+    z-index: 0;
+}
+
+.chat-list, .list-menu {
+    position: relative;
+    width: 25.98%;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 0;
+    z-index: 1;
+}
+
+.chat-chat {
+    position: relative;
+    min-width: 48.26%;
+    width: 73.28%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.chat-tool, .file-image {
+    position: relative;
+    width: 25.76%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+/*ADD FRIEND*/
+.web-app__add, .web-app__info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+.add-out, .out-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.add-in {
+    position: relative;
+    top: 50px;
+    margin: auto;
+    width: 30%;
+    height: 84%;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 3;
+}
+
+/*WEB-APP__LIST*/
+.list-friend, .list-group, .list-addfr, .list-addgr {
+    position: relative;
+    width: 73.28%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 1;
+    padding: 10px;
+}
+
+.list-addfr {
+    background-color: rgb(193, 226, 164);
+    border: 1px solid rgb(253, 250, 217);
+}
+
+.list-addgr {
+    border: 1px solid rgb(8, 194, 255);
+    background-color: rgb(188, 242, 246);
+}
+
+/*WEB-APP__INFO*/
+
+.in-info {
+    position: relative;
+    margin: auto;
+    width: 40%;
+    height: 70%;
+    background-color: rgb(210, 224, 251);
+    padding: 0 12px;
+    border-radius: 10px;
+    z-index: 3;
+}
