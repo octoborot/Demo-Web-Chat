@@ -13,44 +13,56 @@
 
 <body>
     <!-- ĐĂNG KÝ -->
-    <div class="sign-up" style="display: none">
-        <div class="out-sign-up"></div>
+    <form th:action="@{/processForm}" th:object="${customer}"  method="post">
+        <div class="sign-up">
+            <div class="out-sign-up"></div>
 
-        <div class="in-sign-up">
-            <div class="in-sign-up__header">
-                <h2 class="in-sign-up__heading">Đăng ký</h2>
-                <button class="in-sign-up__switch">
-                    Đăng nhập
-                </button>
-            </div>
-
-            <div class="in-sign-up__form">
-                <div class="in-sign-up__group">
-                    <input type="text" class="auth__input" placeholder="Email">
-                </div>
-
-                <div class="in-sign-up__group">
-                    <input type="password" class="auth__input pass-up" placeholder="Mật khẩu">
-                    <button class="eye">
-                        <i class="fa fa-eye eye-noslash"></i>
-                        <i class="fa fa-eye-slash eye-slash" style="display: none"></i>
+            <div class="in-sign-up">
+                <div class="in-sign-up__header">
+                    <h2 class="in-sign-up__heading">Đăng ký</h2>
+                    <button class="in-sign-up__switch">
+                        Đăng nhập
                     </button>
                 </div>
 
-                <div class="in-sign-up__group">
-                    <input type="password" class="auth__input pass-up1" placeholder="Nhập lại mật khẩu">
-                    <button class="eye1">
-                        <i class="fa fa-eye eye-noslash1"></i>
-                        <i class="fa fa-eye-slash eye-slash1" style="display: none"></i>
-                    </button>
-                </div>
-            </div>
+                <div class="in-sign-up__form">
+                    <br>
+                    <input type="text" class="auth__input" th:field="*{firstName}" placeholder="First name">
+                    <br>
+                    <input type="text" class="auth__input" th:field="*{lastName}" placeholder="Last name">
 
-            <div class="in-sign-up__btn">
-                <button class="btn btn--primary">ĐĂNG KÝ</button>
+                    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
+
+                    <div class="in-sign-up__group">
+                        <input type="text" th:if="${#fields.hasErrors('lastName')}" class="auth__input" placeholder="Tên đăng nhập">
+                    </div>
+
+                    <div class="in-sign-up__group">
+                        <input type="password" class="auth__input pass-up" th:field="*{freePasses}" placeholder="Mật khẩu">
+
+                        <span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
+
+                        <button class="eye">
+                            <i class="fa fa-eye eye-noslash"></i>
+                            <i class="fa fa-eye-slash eye-slash" style="display: none"></i>
+                        </button>
+                    </div>
+
+                    <div class="in-sign-up__group">
+                        <input type="password" class="auth__input pass-up1" placeholder="Nhập lại mật khẩu">
+                        <button class="eye1">
+                            <i class="fa fa-eye eye-noslash1"></i>
+                            <i class="fa fa-eye-slash eye-slash1" style="display: none"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="in-sign-up__btn">
+                    <button class="btn btn--primary">ĐĂNG KÝ</button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <!-- ĐĂNG NHẬP -->
     <div class="sign-in" style="display: none">
@@ -89,7 +101,7 @@
     </div>
 
     <!--Giao diện web-->
-    <div class="web-app">
+    <div class="web-app" style="display: none">
         <div class="web-app__header">
             <div class="web-app__left">
                 <i class="fa fa-hippo icon-left-header"></i>
